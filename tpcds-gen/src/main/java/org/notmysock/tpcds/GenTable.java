@@ -187,7 +187,7 @@ public class GenTable extends Configured implements Tool {
           }
         }
 
-        Process p = Runtime.getRuntime().exec(cmd, null, new File("dsdgen/tools/"));
+        Process p = Runtime.getRuntime().exec(cmd, null, new File("target/tools/"));
         int status = p.waitFor();
         if(status != 0) {
           String err = readToString(p.getErrorStream());
